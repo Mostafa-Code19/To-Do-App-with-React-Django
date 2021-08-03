@@ -1,0 +1,168 @@
+body {
+    background: rgb(50, 51, 83);
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: monospace;
+    color: white;
+}
+
+h2 {
+    font-family: monospace;
+}
+
+.container {
+    background: rgb(189, 189, 189);
+    width: 60rem;
+    padding: 1rem;
+    position: relative;
+    border-radius: 5px;
+
+    &__buttons {
+        position: absolute;
+        right: 0;
+    }
+}
+
+ul {
+    li {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        font-size: 1.25rem;
+        list-style-type: none;
+        font-family: monospace;
+        border-top: 1px solid rgba(128, 128, 128, 0.507);
+        display: flex;
+
+        button {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.button {
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: .3rem .6rem;
+    box-shadow: 0 0 3px black;
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-purple {
+        background: #4a3ea9
+    }
+}
+
+.addField {
+    position: absolute;
+    background: #fdfdfd;
+    padding: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    z-index: 1;
+
+    &__closeBtn {
+        background: none;
+        border: none;
+        position: absolute;
+        right: .5rem;
+        top: .5rem;
+        font-size: 1.125rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.editField {
+    background: rgb(189, 189, 189);
+    width: 60rem;
+    padding: 1rem;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 1.25rem;
+
+    &__buttons {
+        position: absolute;
+        right: 0;
+    }
+
+    input {
+        width: 90%;
+
+    }
+}
+
+.fade {
+    &In {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(-50%, 0);
+        transition: all .3s ease-in-out;
+    }
+
+    &Out {
+        visibility: hidden;
+        opacity: 0;
+        transform: translate(-50%, -10px);
+        transition: all .3s ease-in-out;
+    }
+}
+
+input {
+    border: none;
+    box-shadow: 0 0 2px black;
+    padding: .5rem;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+span {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.removeSlide {
+    transform: translate(100%);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.taskCounter {
+    padding: 0.3rem;
+    font-size: 1.25rem;
+    font-family: monospace;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.completeManager {
+    position: relative;
+    left: 2.5rem;
+    width: max-content;
+
+    button {
+        margin-right: 1rem;
+        background: white;
+        color: black;
+    }
+}
+
+.addTask {
+    background: #4a3ea9;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+}
